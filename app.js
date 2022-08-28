@@ -64,6 +64,15 @@ class UI {
     buttons.forEach((button) => {
       let id = button.dataset.id;
       let inCart = cart.find((item) => item.id === id);
+      if (inCart) {
+        button.innerHTML = "In Cart";
+        button.disabled = true;
+      } else {
+        button.addEventListener("click", (e) => {
+          e.target.innerText = "In Cart";
+          e.target.disabled = true;
+        });
+      }
     });
   }
 }
