@@ -67,12 +67,11 @@ class UI {
       if (inCart) {
         button.innerHTML = "In Cart";
         button.disabled = true;
-      } else {
-        button.addEventListener("click", (e) => {
-          e.target.innerText = "In Cart";
-          e.target.disabled = true;
-        });
       }
+      button.addEventListener("click", (e) => {
+        e.target.innerText = "In Cart";
+        e.target.disabled = true;
+      });
     });
   }
 }
